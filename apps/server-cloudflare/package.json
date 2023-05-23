@@ -1,0 +1,41 @@
+{
+    "name": "server-cloudflare",
+    "version": "1.0.0",
+    "private": true,
+    "main": "./src/index.ts",
+    "types": "./src/index.ts",
+    "files": [
+        "pluv-io.ts"
+    ],
+    "scripts": {
+        "build": "rollup --config ./rollup.config.mjs",
+        "dev": "wrangler dev --port 3001",
+        "drizzle": "drizzle-kit",
+        "drizzle:generate": "drizzle-kit generate:sqlite --config drizzle.config.js",
+        "drizzle:up": "drizzle-kit up:sqlite --config drizzle.config.js",
+        "wrangler": "wrangler"
+    },
+    "dependencies": {
+        "@pluv/io": "^0.6.0",
+        "@pluv/platform-cloudflare": "^0.3.1",
+        "drizzle-orm": "^0.26.0",
+        "yjs": "^13.6.1",
+        "zod": "^3.21.4"
+    },
+    "devDependencies": {
+        "@cloudflare/workers-types": "^4.20230518.0",
+        "@pluv-example/tsconfig": "workspace:^",
+        "@rollup/plugin-commonjs": "^25.0.0",
+        "@rollup/plugin-dynamic-import-vars": "^2.0.3",
+        "@rollup/plugin-json": "^6.0.0",
+        "@rollup/plugin-node-resolve": "^15.0.2",
+        "@rollup/plugin-terser": "^0.4.3",
+        "@rollup/plugin-typescript": "^11.1.1",
+        "drizzle-kit": "^0.18.0",
+        "rollup": "^3.23.0",
+        "rollup-plugin-node-globals": "^1.4.0",
+        "rollup-plugin-node-polyfills": "^0.2.1",
+        "typescript": "^5.0.4",
+        "wrangler": "^3.0.1"
+    }
+}

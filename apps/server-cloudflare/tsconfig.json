@@ -1,0 +1,11 @@
+{
+	"extends": "@pluv-example/tsconfig/wrangler.json",
+	"include": [
+		"**/*.ts",
+		"**/*.tsx"
+	],
+	"compilerOptions": {
+		"baseUrl": ".",
+		"types": ["@cloudflare/workers-types"]
+	}
+}

@@ -1,0 +1,11 @@
+{
+  "extends": "@pluv-example/tsconfig/nextjs.json",
+  "compilerOptions": {
+    "plugins": [{ "name": "next" }],
+    "paths": {
+      "server-cloudflare/pluv-io": ["../server-cloudflare/pluv-io"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}
